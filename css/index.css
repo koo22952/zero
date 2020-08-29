@@ -237,6 +237,41 @@ body {
   margin-right: 5px;
 }
 
+#root .nav_top-opt .hamburger {
+  display: none;
+  width: 20px;
+  height: 14px;
+  position: relative;
+  margin: 50px 10px;
+}
+
+#root .nav_top-opt .hamburger .line1,
+#root .nav_top-opt .hamburger .line2,
+#root .nav_top-opt .hamburger .line3,
+#root .nav_top-opt .hamburger .line4 {
+  width: 20px;
+  height: 2px;
+  background-color: #0b222a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+#root .nav_top-opt .hamburger .line1 {
+  -webkit-transform: translate(-50%, -350%);
+          transform: translate(-50%, -350%);
+}
+
+#root .nav_top-opt .hamburger .line4 {
+  -webkit-transform: translate(-50%, 250%);
+          transform: translate(-50%, 250%);
+}
+
 #root .nav_menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,10 +315,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #root .remind > div > span {
-  line-height: 26px;
   margin-right: auto;
 }
 
@@ -291,7 +328,6 @@ body {
   color: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   margin-left: 10px;
-  line-height: 26px;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -769,7 +805,7 @@ body {
 }
 
 @media screen and (max-width: 1220px) {
-  .groceries {
+  #root main .groceries {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -782,112 +818,18 @@ body {
             align-items: center;
     padding-top: 50px;
   }
-  .groceries-info {
+  #root main .groceries-info {
     max-width: 420px;
     text-align: center;
     margin: 0 auto 90px;
   }
-  .groceries-info_meg {
-    font-size: 52px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    line-height: 56px;
-  }
-  .groceries-info_btn {
-    display: inline-block;
-    height: 56px;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 0 20px;
-    line-height: 56px;
-    cursor: pointer;
-  }
-  .groceries-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .groceries-items .groceries-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 12.5px;
-    width: 190px;
-    height: 196px;
-    padding: 20px;
-    background-color: #f1c1b8;
-  }
-  .groceries-items .groceries-item_icon {
-    height: 120px;
-    position: relative;
-  }
-  .groceries-items .groceries-item_icon > img {
-    width: 171px;
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    -webkit-filter: drop-shadow(10px 6px 10px rgba(0, 0, 0, 0.25));
-            filter: drop-shadow(10px 6px 10px rgba(0, 0, 0, 0.25));
-  }
-  .groceries-items .groceries-item_content .top {
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.75);
-    font-size: 12px;
-    line-height: 16px;
-    opacity: 0.75;
-    height: 32px;
-  }
-  .groceries-items .groceries-item_content .bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    line-height: 42px;
-  }
-  .groceries-items .groceries-item_content .bottom .price {
-    margin-right: 10px;
-    font-size: 25px;
-  }
-  .groceries-items .groceries-item_content .bottom .add {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0 10px;
-    height: 32px;
-    font-size: 10px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    border: 2px solid black;
-    text-transform: uppercase;
-  }
-  .plastic {
+  #root main .plastic {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .plastic-left {
+  #root main .plastic-left {
     position: absolute;
     top: 0;
     left: 50%;
@@ -896,19 +838,19 @@ body {
     -webkit-transform-origin: top;
             transform-origin: top;
   }
-  .plastic-right {
+  #root main .plastic-right {
     padding-top: 320px;
   }
-  .plastic-right > img {
+  #root main .plastic-right > img {
     display: none;
   }
-  .chill {
+  #root main .chill {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .chill-right {
+  #root main .chill-right {
     position: absolute;
     top: 0;
     left: 50%;
@@ -917,11 +859,151 @@ body {
     -webkit-transform-origin: top;
             transform-origin: top;
   }
-  .chill-left {
+  #root main .chill-left {
     margin-top: 350px;
   }
-  .chill-left > img {
+  #root main .chill-left > img {
     display: none;
+  }
+  #root main .member .one {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #root .nav_top {
+    height: 70px;
+    border: none;
+  }
+  #root .nav_top-logo {
+    left: 0%;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+  }
+  #root .nav_top-opt .login,
+  #root .nav_top-opt .sign {
+    display: none;
+  }
+  #root .nav_top-opt .search {
+    height: 40px;
+    width: 40px;
+  }
+  #root .nav_top-opt .search > img {
+    width: 19px;
+  }
+  #root .nav_top-opt .cart {
+    line-height: 40px;
+    border-radius: 26px;
+    padding: 0 10px;
+  }
+  #root .nav_top-opt .cart > img {
+    width: 20px;
+    margin-left: 4px;
+    margin-right: 9px;
+  }
+  #root .nav_top-opt .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #root .nav_menu {
+    display: none;
+  }
+  #root .remind {
+    background-color: #f1c1b8;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  #root .remind > div {
+    width: 100%;
+    min-height: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 7px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #root .remind > div > span {
+    line-height: 26px;
+    margin-right: auto;
+  }
+  #root .remind > div > a {
+    color: rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    margin-left: 10px;
+    line-height: 26px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  #root main .groceries-items .groceries-item:last-child {
+    display: none;
+  }
+  #root main .plastic {
+    min-height: 500px;
+  }
+  #root main .plastic-right > h2 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  #root main .chill {
+    min-height: 500px;
+  }
+  #root main .chill-left > h2 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  #root main .journey {
+    width: 100%;
+    padding: 90px 20px;
+    background-color: #104d46;
+    margin: 0 auto 230px;
+  }
+  #root main .member {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 160px;
+    z-index: 0;
+  }
+  #root main .member > h2 {
+    font-size: 42px;
+    line-height: 56px;
+  }
+  #root footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #root footer .left {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #root footer .left > img {
+    margin: 0 0 28px;
+  }
+  #root footer .right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #root footer .right-social {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #root footer .right-social > img {
+    margin: 0 10px;
   }
 }
 
